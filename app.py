@@ -3,9 +3,9 @@ import sklearn
 import pickle
 from numpy import round
 
-kneighbors_model = pickle.load(open(r'models\kneighbors_model.pkl', 'rb'))
-decision_tree_model = pickle.load(open(r'models\decision_tree_model.pkl', 'rb'))
-random_forest_model = pickle.load(open(r'models\random_forest_model.pkl', 'rb'))
+kneighbors_model = pickle.load(open('models/kneighbors_model.pkl', 'rb'))
+decision_tree_model = pickle.load(open('models/decision_tree_model.pkl', 'rb'))
+random_forest_model = pickle.load(open('models/random_forest_model.pkl', 'rb'))
 
 app = Flask(__name__)
 
