@@ -1,41 +1,78 @@
 <div class="rendered-form">
     <div class="">
-        <h1 id="control-1736568"><div style="text-align:justify;">Прогнозирование размеров сварного шва при электронно-лучевой сварке тонкостенных конструкций аэрокосмического назначения</div></h1></div>
-    <div class="formbuilder-radio-group form-group field-rg_model">
-        <label for="rg_model" class="formbuilder-radio-group-label">Выберите модель:</label>
+        <h1 id="control-1736568"><div style="text-align:center;">Прогнозирование размеров сварного шва при электронно-лучевой сварке тонкостенных конструкций аэрокосмического назначения</div></h1></div>
+        <form method="post">
+            <div class="formbuilder-radio-group form-group field-rg_model">
+        <label for="rg_model" class="formbuilder-radio-group-label"><b>Выберите модель:</b></label>
         <div class="radio-group">
             <div class="formbuilder-radio">
-                <input name="rg_model" access="false" id="rg_model-0" value="0" type="radio" checked="checked">
+                <input name="rg_model" id="rg_model-0" value="0" type="radio" checked="checked">
                 <label for="rg_model-0">KNeighborsRegressor</label>
             </div>
             <div class="formbuilder-radio">
-                <input name="rg_model" access="false" id="rg_model-1" value="1" type="radio">
+                <input name="rg_model" id="rg_model-1" value="1" type="radio">
                 <label for="rg_model-1">DecisionTreeRegressor</label>
             </div>
             <div class="formbuilder-radio">
-                <input name="rg_model" access="false" id="rg_model-2" value="2" type="radio">
+                <input name="rg_model" id="rg_model-2" value="2" type="radio">
                 <label for="rg_model-2">RandomForestRegressor</label>
             </div>
         </div>
     </div>
-    <div class="formbuilder-number form-group field-iw">
-        <label for="iw" class="formbuilder-number-label">Величина сварочного тока (IW)<span class="formbuilder-required">*</span><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 43 до 49, но Вы можете попробовать другое.">?</span></label>
-        <input type="number" class="form-control" name="iw" access="false" id="iw" title="Значения в эксперименте перебирались в интервале от 43 до 49, но Вы можете попробовать другое." required="required" aria-required="true">
+    <br>
+    <br>
+    Для получения справки по интервалам значений наведите курсор на поле ввода. В качестве значений по-умолчанию выбраны средние значения из интервалов эксперимента.
+    <br>
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td style="width: 80%;">
+                    <div class="formbuilder-number form-group field-iw">
+                    <label for="iw" class="formbuilder-number-label">Величина сварочного тока (IW)<span class="formbuilder-required"></span><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 43 до 49, но Вы можете попробовать другое."></span></label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" name="iw" value="45.67" id="iw" title="Значения в эксперименте перебирались в интервале от 43 до 49, но Вы можете попробовать другое." required="required" aria-required="true">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="formbuilder-number form-group field-if">
+                    <label for="if" class="formbuilder-number-label">Ток фокусировки электронного пучка (IF)<span class="formbuilder-required"></span><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 131 до 150, но Вы можете попробовать другое."></span></label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" name="if" value="141.33" id="if" title="Значения в эксперименте перебирались в интервале от 131 до 150, но Вы можете попробовать другое." required="required" aria-required="true">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="formbuilder-number form-group field-vw">
+                    <label for="vw" class="formbuilder-number-label">Скорость сварки (VW)<span class="formbuilder-required"></span><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 4.5 до 12, но Вы можете попробовать другое."></span></label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" name="vw" value="8.64" id="vw" title="Значения в эксперименте перебирались в интервале от 4.5 до 12, но Вы можете попробовать другое." required="required" aria-required="true">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="formbuilder-number form-group field-fp">
+                    <label for="fp" class="formbuilder-number-label"><div>Расстояние от поверхности образцов до электронно-оптической системы (FP)</div><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 50 до 125, но Вы можете попробовать другое."></span></label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" name="fp" value="78.33" id="fp" title="Значения в эксперименте перебирались в интервале от 50 до 125, но Вы можете попробовать другое.">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>        
+    <div class="formbuilder-button form-group field-button-1731265147969">
+    <button type="submit" class="btn-default btn" name="button-1731265147969" style="width: 100%;" id="button-1731265147969">Рассчитать</button>
     </div>
-    <div class="formbuilder-number form-group field-if">
-        <label for="if" class="formbuilder-number-label">Ток фокусировки электронного пучка (IF)<span class="formbuilder-required">*</span><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 131 до 150, но Вы можете попробовать другое.">?</span></label>
-        <input type="number" class="form-control" name="if" access="false" id="if" title="Значения в эксперименте перебирались в интервале от 131 до 150, но Вы можете попробовать другое." required="required" aria-required="true">
-    </div>
-    <div class="formbuilder-number form-group field-vw">
-        <label for="vw" class="formbuilder-number-label">Скорость сварки (VW)<span class="formbuilder-required">*</span><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 4.5 до 12, но Вы можете попробовать другое.">?</span></label>
-        <input type="number" class="form-control" name="vw" access="false" id="vw" title="Значения в эксперименте перебирались в интервале от 4.5 до 12, но Вы можете попробовать другое." required="required" aria-required="true">
-    </div>
-    <div class="formbuilder-number form-group field-fp">
-        <label for="fp" class="formbuilder-number-label">
-            <div>Расстояние от поверхности образцов до электронно-оптической</div>
-            <div>системы (FP)</div><span class="tooltip-element" tooltip="Значения в эксперименте перебирались в интервале от 50 до 125, но Вы можете попробовать другое.">?</span></label>
-        <input type="number" class="form-control" name="fp" access="false" id="fp" title="Значения в эксперименте перебирались в интервале от 50 до 125, но Вы можете попробовать другое.">
-    </div>
+    </form>
     <div class="">
-        <h1 access="false" id="control-4707852">Header</h1></div>
+        <h1 id="control-4707852">{{message}}</h1></div>
 </div>
